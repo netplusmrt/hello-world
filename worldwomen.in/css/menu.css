@@ -1,0 +1,132 @@
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.menu
+{
+	width:800px;
+	background-repeat: no-repeat;
+	margin:0 auto 0 auto;
+
+	height:40px;
+	text-align:center;
+}
+.menu ul
+{
+	text-align:center;
+	display:block;
+}
+.menu ul li
+{
+
+	background:url(../images/sep.png) no-repeat;
+	background-position:right;
+}
+.menu ul li.last
+{
+	background:none;
+}
+.menu ul li a
+{
+	color: #000;
+	display:inline-block;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.menu ul li a:hover
+{
+	color: #9DECFF;
+}
+
+/*
+ LEVEL ONE
+ */
+ul.dropdown {
+    position: relative;
+}
+
+ul.dropdown li {
+	padding:5px 5px 5px 5px;
+	font-weight: bold;
+    float: left;
+    zoom: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;   
+	height: 30px
+}
+
+ul.dropdown a:hover {
+    color: #000;
+}
+
+ul.dropdown a:active {
+    color: #FFF;
+}
+
+ul.dropdown li a {
+    display: block;
+    padding: 8px 8px;
+    color: #000;
+	font-size:14px;
+}
+
+ul.dropdown li:last-child a {
+    border-right: none;
+}
+ /* Doesn't work in IE */
+ul.dropdown li.hover, ul.dropdown li:hover {
+    background: #666;
+    color: black;
+    position: relative;
+    color:#FFF;
+}
+
+ul.dropdown li.hover a {
+    color: #FFF;
+    font-weight:bold;
+}
+
+/*
+ LEVEL TWO
+ */
+ul.dropdown ul {
+    width: 220px;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+ul.dropdown ul li {
+    font-weight: normal;
+    color: #000;
+    float: none;
+}
+
+/* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a {
+    border-right: none;
+    width: 100%;
+    display: inline-block;
+}
+
+/*
+ LEVEL THREE
+ */
+ul.dropdown ul ul {
+    left: 100%;
+    top: 0;
+}
+
+ul.dropdown li:hover > ul {
+    visibility: visible;
+}
